@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saraswathi Thyagaraja College - TARANG</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+/* Banner */
+#banner {
+    background: linear-gradient(135deg, #87ceeb, #add8e6);
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: bannerDown 0.8s ease-out;
+}
+
+#banner h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    animation: fadeIn 1s ease 0.2s both;
+}
+
+#banner h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease 0.4s both;
+}
+
+#banner p {
+    font-size: 1rem;
+    opacity: 0.95;
+    font-weight: 300;
+    animation: fadeIn 1s ease 0.6s both;
+}
+
+/* Details Section */
+#details {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Cards */
+.box {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    flex: 1;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border-top: 5px solid #87ceeb;
+    animation: cardUp 0.8s ease-out both;
+}
+
+#Event_Details {
+    animation-delay: 0.3s;
+}
+
+#Registration {
+    animation-delay: 0.5s;
+}
+
+/* Simple hover effect */
+.box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.box h1 {
+    font-size: 1.4rem;
+    color: #4682b4;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.box h3 {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 12px 0;
+    font-weight: 400;
+    transition: color 0.25s ease;
+}
+
+.box h3:hover {
+    color: #4682b4;
+}
+
+.box p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #444;
+    margin: 15px 0;
+}
+
+/* Register Button */
+button {
+    background: linear-gradient(135deg, #87ceeb, #4682b4);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease,
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+    box-shadow: 0 4px 10px rgba(70, 130, 180, 0.3);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 16px rgba(70, 130, 180, 0.4);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* Animations */
+@keyframes bannerDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes cardUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile View */
+@media screen and (max-width: 600px) {
+    #banner {
+        padding: 30px 15px;
+    }
+
+    #banner h1 {
+        font-size: 2rem;
+    }
+
+    #banner h2 {
+        font-size: 1.5rem;
+    }
+
+    #details {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .box {
+        padding: 25px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Banner Section -->
+<div id="banner">
+    <h1>STC Clg</h1>
+    <h2>TARANG</h2>
+    <p>Inter College Event | 8/10/2026</p>
+</div>
+
+<!-- Details Section -->
+<div id="details">
+
+    <div id="Event_Details" class="box">
+        <h1>Event Details</h1>
+        <h3>Singing</h3>
+        <h3>Quiz</h3>
+    </div>
+
+    <div id="Registration" class="box">
+        <h1>Registration</h1>
+        <p>Fees: ₹200</p>
+        <button type="button">Register Now</button>
+    </div>
+
+</div>
+
+</body>
+</html>
